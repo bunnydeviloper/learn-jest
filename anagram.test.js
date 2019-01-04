@@ -1,7 +1,10 @@
 const isAnagram = require('./anagram');
 
-beforeEach(() => initDB());
-afterEach(() => closeDB());
+beforeAll(() => initDB()); // scope to this file
+afterAll(() => closeDB()); // scope to this file
+
+// beforeEach(() => initDB());
+// afterEach(() => closeDB());
 
 const initDB = () => console.log('Database initialized...');
 const closeDB = () => console.log('Database closed...');
