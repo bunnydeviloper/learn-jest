@@ -33,3 +33,8 @@ test('Should be under $150', () => {
 test('There is no I in team', () => {
   expect('team').not.toMatch(/I/); // REGEX
 });
+
+test('Mint should be in teaFlavors', () => {
+  const teaFlavors = ['lemonGinger', 'mint', 'chai'];
+  expect(teaFlavors).toContain('mint');
+});
