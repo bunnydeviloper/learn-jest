@@ -38,3 +38,11 @@ test('Mint should be in teaFlavors', () => {
   const teaFlavors = ['lemonGinger', 'mint', 'chai'];
   expect(teaFlavors).toContain('mint');
 });
+
+// Promise
+test('User fetched should have name Leanne Graham', () => {
+  expect.assertions(1);
+  return functions.fetchUser().then(data => {
+    expect(data.name).toEqual('Leanne Graham');
+  });
+});
