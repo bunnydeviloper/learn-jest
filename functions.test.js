@@ -29,3 +29,7 @@ test('Should be under $150', () => {
   const dress2 = 70;
   expect(dress1 + dress2).toBeLessThan(150);
 });
+
+test('There is no I in team', () => {
+  expect('team').not.toMatch(/I/); // REGEX
+});
