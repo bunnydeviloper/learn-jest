@@ -15,3 +15,11 @@ test('Should be null', () => {
 test('Should be falsy', () => {
   expect(functions.checkValue(undefined)).toBeFalsy();
 });
+
+// for primitive types, use toBe, for object/array: use toEqual
+test('User should be Sophie Sleepy object', () => {
+  expect(functions.createUser()).toEqual({
+    'firstName': 'Sophie',
+    'lastName': 'Sleepy'
+  });
+});
