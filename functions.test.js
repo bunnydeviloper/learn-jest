@@ -23,3 +23,9 @@ test('User should be Sophie Sleepy object', () => {
     'lastName': 'Sleepy'
   });
 });
+
+test('Should be under $150', () => {
+  const dress1 = 40;
+  const dress2 = 70;
+  expect(dress1 + dress2).toBeLessThan(150);
+});
