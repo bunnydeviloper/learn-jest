@@ -39,10 +39,17 @@ test('Mint should be in teaFlavors', () => {
   expect(teaFlavors).toContain('mint');
 });
 
-// Promise
+// Working with async data using promise
 test('User fetched should have name Leanne Graham', () => {
   expect.assertions(1);
   return functions.fetchUser().then(data => {
     expect(data.name).toEqual('Leanne Graham');
   });
+});
+
+// Working with async data using async/await
+test('User fetched from async/await should have name Leanne Graham', async () => {
+  expect.assertions(1);
+  const data = await functions.fetchUser();
+  expect(data.name).toEqual('Leanne Graham');
 });
