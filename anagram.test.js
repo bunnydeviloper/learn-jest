@@ -1,5 +1,11 @@
 const isAnagram = require('./anagram');
 
+beforeEach(() => initDB());
+afterEach(() => closeDB());
+
+const initDB = () => console.log('Database initialized...');
+const closeDB = () => console.log('Database closed...');
+
 test('isAnagram function exists', () => {
   // expect(isAnagram).toBeDefined();
   expect(typeof isAnagram).toBe('function');
